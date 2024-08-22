@@ -4,6 +4,7 @@ Exemple d'utilisation du BOT en PHP, prochainement intégré dans Yoop
 ```javascript
 $client = new \WebSocket\Client("ws://<NOM_DU_CONTAINER_BOT>:8282");
 $client->text(json_encode([
+    "debug" => true,
     "host" => 'http://<NOM_DU_CONTAINER_HTTP>',
     "actions" => [
         [
@@ -23,6 +24,8 @@ $client->text(json_encode([
 ```
 
 *La partie script est facultative et le sleep également*
+Pour permettre l'utilisation et le fonctionnement de fetch il est recommandé d'ajouter des sleep, pour obtenir un résultat.
+Dans cette nouvelle version il est possible d'activer un mode debug permettant de simplifier la mise en place dans un challenge.
 
 
 # Intégration dans votre docker-compose.yml
